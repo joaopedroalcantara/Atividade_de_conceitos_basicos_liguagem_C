@@ -9,6 +9,7 @@ média de aluno, progressão aritmética e manipulação de listas de números.
 
 O usuário escolhe uma opção no menu e o programa executa o exercício correspondente.
 
+
 Objetivo
 
 O projeto tem como objetivo praticar conceitos básicos da programação estruturada em C, como:
@@ -24,6 +25,7 @@ Manipulação de vetores (arrays)
 Entrada e saída de dados com scanf e printf
 
 Organização do código utilizando menu interativo
+
 
 Funcionalidades
 
