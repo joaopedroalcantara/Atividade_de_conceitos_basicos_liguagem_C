@@ -1,6 +1,6 @@
 # Atividade_de_conceitos_basicos_liguagem_C
 
-Sobre o Projeto
+📌Sobre o Projeto📌
 
 Este projeto é um programa em Linguagem C que reúne vários exercícios de lógica dentro de um menu interativo.
 
@@ -10,7 +10,7 @@ média de aluno, progressão aritmética e manipulação de listas de números.
 O usuário escolhe uma opção no menu e o programa executa o exercício correspondente.
 
 
-Objetivo
+🎯Objetivo🎯
 
 O projeto tem como objetivo praticar conceitos básicos da programação estruturada em C, como:
 
@@ -27,7 +27,7 @@ Entrada e saída de dados com scanf e printf
 Organização do código utilizando menu interativo
 
 
-Funcionalidades
+⚙️Funcionalidades⚙️
 
 O menu do programa possui várias opções de exercícios, como:
 
