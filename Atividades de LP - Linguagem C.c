@@ -5,7 +5,7 @@ int main(){
 
 int opcao = 0;
 
-while(opcao != 16){
+while(opcao != 19){
 	
 printf("\n\n********************MENU DE OPCOES******************** \n"
 "1) Media Fatec (If) \n"
@@ -304,22 +304,14 @@ switch(opcao){
             double produto;
             int opcao; 
 
-        
-
             printf(" Vamos fazer compras e veja as opcoes de Desconto: ");
             printf("\n\n Digite o valor do produto que voce quer comprar: ");
             scanf("%lf", &produto);
 
-            
-
             fflush(stdin);
-
-            
 
             printf("Veja as opcoes de desconto em porcentagem: \n 1) 5 \n 2) 8 \n 3) 15 \n 4) 25 \n Escolha sua opcao: "  );
             scanf("%i", &opcao);
-
-            
 
             switch(opcao){
 
@@ -330,33 +322,24 @@ switch(opcao){
                 produto -= produto *0.05;
                 printf("Valor do produto com desconto: %3.lf", produto);
 
-                
-
                 break;    
 
             } 
-
-            
 
             case 2:{
 
                 produto -= produto *0.08;
                 printf("Valor do produto com desconto: %3.lf", produto);
 
-                
-
                 break;   
 
             } 
 
-            
 
             case 3:{
 
                 produto -= produto *0.15;
                 printf("Valor do produto com desconto: %3.lf", produto);
-
-                
 
                 break;
 
@@ -364,8 +347,6 @@ switch(opcao){
 
                 produto -= produto *0.25;
                 printf(" Valor do produto com desconto: %3.lf", produto);
-
-                
 
                 break;
 
@@ -395,14 +376,11 @@ switch(opcao){
             printf("Digite um numero: ");
             scanf("%i", &a);
 
-
-
             if(a < 0){
 
                 printf ("Nao existe essa fatorial: \n");
 
             } else{
-
 
                 do{
 
@@ -410,7 +388,6 @@ switch(opcao){
                     b++;
 
                 }while(b <= a);
-
 
                 printf("A fatorial de %i eh:  %li", a, fatorial);
 
@@ -420,11 +397,7 @@ switch(opcao){
 
     }
 
-
-
     case 6:{
-
-        
 
         int num;
         int a = 0;
@@ -432,13 +405,9 @@ switch(opcao){
         int c = 0;
         int i = 1;
 
-
-
         printf(" Vamos ver a sequencia de Fibonacci: \n");
         printf(" Digite um numero para ser o termo da sequencia: ");
         scanf("%i", &num);
-
-
 
         if (num <= 0){
 
@@ -449,27 +418,18 @@ switch(opcao){
             do{
 
                 printf(" %i - ", a);
-
                 c = a;
-
                 a = b;
-
                 b += c;
 
-
-
                 i++;
-
-
 
             } while(i <= num);
 
         }
-
         break;
 
     }
-
 
 
     case 7:{
@@ -487,49 +447,28 @@ switch(opcao){
 
 
         printf("Vamos Calcular a P.A de um numero positivo! \n");
-
         printf("\n Digite um numero Para ser A1: ");
-
         scanf("%i", &a1);
 
-
-
         printf("\n Digite um numero para ser o Termo da P.A: ");
-
         scanf("%i", &R);
 
-
-
         printf("\n Digite um numero para ser o limite da P.A: ");
-
         scanf("%i", &limit);
-
 
 
         do{
 
-
-
             printf(" %i - ", a1);
-
             a1 += R;
-
-            
 
             i++;
 
-
-
         } while(i <= limit);
-
-
-
-
 
         break;
 
     }
-
 
 
     case 8:{
@@ -561,8 +500,6 @@ switch(opcao){
 
         break;
     }
-
-
 
     case 9:{
 
@@ -600,10 +537,7 @@ switch(opcao){
     }
 
 
-
     case 10:{
-
-
 
         int a1 =0;
         int R =0;
@@ -769,7 +703,7 @@ switch(opcao){
 		int menor = 0;
 		
 		printf("Vamos descobrir qual eh o menor numero! \n"
-		"Digite a quantidade de numeros que voce quer avaliar: ");
+		"Digite a quantidade de numeros que voce quer avaliarvaté (30): ");
 		scanf("%i", &limit);
 		
 		fflush(stdin);
@@ -815,7 +749,7 @@ switch(opcao){
 		int cont = 0;
 
 		printf("Vamos mostrar a ordem inversa da lista de valores");
-		printf("\n Digite o limite de numeros da lista: ");
+		printf("\n Digite o limite de numeros da lista até (30): ");
 		scanf("%i", &limit);
 
         for(cont = 0;cont < limit ; cont++ ){
