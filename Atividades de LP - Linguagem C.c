@@ -6,7 +6,7 @@ int main(){
 
 int opcao = 0;
 
-while(opcao != 21){
+while(opcao != 27){
 
 printf("\n\n********************MENU DE OPCOES******************** \n"
 "1) Media Fatec (If) \n"
@@ -28,8 +28,14 @@ printf("\n\n********************MENU DE OPCOES******************** \n"
 "17) Ler um conjunto de valores e um multiplicar e exibir os resultados \n"
 "18) Lista de valores em exponencicao \n"
 "19) Lista de valores em raiz quadrada \n"
-"20) Limpa caixa de texto \n"
-"21) Sair \n"
+"20) Comparar strings (Iguais ou Diferentes?)  \n"
+"21) Indentifica palindromo \n"
+"22) Indentifica palindromos multi-frases \n"
+"23) Passar string para maiuscuo \n"
+"24) Passar string para minusculo \n"
+"25) Concatenas duas strings \n"
+"26) Limpa caixa de texto \n"
+"27) Sair"
 
 "\nEscolha uma das Opcoes acima: ");
 
@@ -866,8 +872,135 @@ switch(opcao){
 		
 		break;
 	}
-    
     case 20:{
+
+        char palavra1[30];
+    	char palavra2[30];
+        int i = 0;
+    	int compara = 0;
+    	
+    	system("cls");
+    	printf("Vamos comparar duas palavras e ver se sao iguais: \n");
+    	printf("Digite a primeira palavra: ");
+    	scanf("%s", palavra1);
+    	
+    	printf("Digite a segunda palavra: ");
+    	scanf("%s", palavra2);
+    	
+    	for(int i = 0; i < 30; i++){
+    		if(palavra1[i] == '\0') break;
+    		if(palavra2[i] == '\0') break;
+    		
+            compara = 0;
+
+    		if(palavra1[i] == palavra2[i]){
+    			compara++;
+
+			}else{
+                printf("\nAs palavras sao diferentes");
+                break;
+			}
+		}
+
+            if(compara == 1){
+                printf("As palavras sao iguais! ");
+            }
+
+		break;
+	}
+
+    case 21:{
+
+        char palavra1[30];
+        char palavra2[30]; 
+        int conta = 0;
+        int compara = 0;
+
+        system("cls");
+
+        printf("\nVamos descobrir se uma palavra eh palindromo: \n");
+        printf("Digite a palavra: ");
+        scanf("%s", palavra1); 
+
+        for(int i = 0; i < 30; i++){
+            if (palavra1[i] == '\0'){
+                break;
+            }else{
+                conta++;
+            }
+        }
+
+        for(int i = 0; i < conta; i ++){
+            palavra2[i] = palavra1[conta - 1 -i];
+        }
+
+        for(int i = 0; i < 30; i++){
+            if (palavra1[i] == '\0') break;
+
+            compara = 0;
+
+            if(palavra1[i] == palavra2[i]){
+                compara++;
+
+            }else{
+                printf("\nNao eh um palindromo! ");
+                break;
+            }
+        }
+
+        if(compara == 1){
+            printf("\nEh um palindromo! ");
+        }
+
+        break;
+    }
+
+    case 22:{
+
+        char frase1[60];
+        char frase2[60]; 
+        int conta = 0;
+        int compara = 1;
+
+        system("cls");
+
+        printf("\nVamos descobrir se uma frase eh palindromo: \n");
+        printf("Digite a frase: ");
+        scanf(" %[^\n]", frase1); 
+
+         for(int i = 0; i < 60; i++){
+            if (frase1[i] == '\0'){
+                break;
+            }else{
+                conta++;
+            }
+        }
+
+        for(int i = 0; i < conta; i ++){
+            frase2[i] = frase1[conta - 1 -i];
+        }
+
+            frase2[conta] = '\0';
+
+        for(int i = 0; i < 60; i++){
+            if (frase1[i] == '\0') break;
+
+            if(frase1[i] == frase2[i]){
+            }else{
+                printf("\nNao eh um palindromo! ");
+                compara = 0;
+                break;
+            }
+        }   
+
+            if(compara == 1){
+            printf("\nEh um palindromo! ");
+            }
+
+        break;
+    }
+    
+    case 26:{
 
         system("cls");
 
@@ -875,7 +1008,9 @@ switch(opcao){
         break;
     }
 
-    case 21:{
+    case 27:{
+
+        system("cls");
 
         printf("Programa Finalizado! ");
         break;
