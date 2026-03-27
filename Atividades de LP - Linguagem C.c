@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <string.h>
 
 int main(){
 
 int opcao = 0;
 
-while(opcao != 27){
+while(opcao != 32){
 
 printf("\n\n********************MENU DE OPCOES******************** \n"
 "1) Media Fatec (If) \n"
@@ -33,9 +34,14 @@ printf("\n\n********************MENU DE OPCOES******************** \n"
 "22) Indentifica palindromos multi-frases \n"
 "23) Passar string para maiuscuo \n"
 "24) Passar string para minusculo \n"
-"25) Concatenas duas strings \n"
-"26) Limpa caixa de texto \n"
-"27) Sair"
+"25) Concatena duas strings \n"
+"26) Conjunto de nomes exibido em maiusculo \n"
+"27) Multiplica matriz de numeros \n"
+"28) Somar duas matrizes \n"
+"29) Subtrair duas matrizes \n"
+"30) Multiplicar duas matrizes \n"
+"31) Limpa caixa de texto \n"
+"32) Sair"
 
 "\nEscolha uma das Opcoes acima: ");
 
@@ -1000,18 +1006,316 @@ switch(opcao){
         break;
     }
     
-    case 26:{
+    case 23:{
+    	
+        char palavra[30];
 
+    	system("cls");
+    	printf("\nVamos tranformar uma frase palavra Minuscula em Maiuscula \n");
+    	
+        printf("Digite uma palavra: ");
+    	scanf("%s" , palavra);
+    	
+        for(int i = 0; palavra[i]!= '\0'; i++){
+            if(palavra[i] >= 'a' && palavra[i] <= 'z'){
+                palavra[i] = palavra[i] - 32;
+            }
+        }
+
+        printf("\nPalavra em maiusculo: %s" , palavra);        
+
+		break;
+	}
+    
+    case 24:{
+        
+        char palavra[30];
+
+    	system("cls");
+    	printf("\nVamos tranformar uma frase palavra Maiuscula em Minuscula \n");
+    	
+        printf("Digite uma palavra: ");
+    	scanf("%s" , palavra);
+    	
+        for(int i = 0; palavra[i]!= '\0'; i++){
+            if(palavra[i] >= 'A' && palavra[i] <= 'Z'){
+                palavra[i] = palavra[i] + 32;
+            }
+        }
+
+        printf("\nPalavra em minusculo: %s" , palavra);     
+    	
+		break;
+	}
+    
+    case 25:{
+    	
+    	char palavra1[30];
+    	char palavra2[30];
+        char palavra3[60];
+        int i = 0;
+        int conta = 0;
+        int j = 0;
+
+    	system("cls");
+    	printf("\nVamos concatenar duas palavras! \n");
+    	printf("Digite a primeira palavra: ");
+    	scanf("%s", palavra1);
+    	
+    	printf("\nDigite a segunda palavra: ");
+        scanf("%s", palavra2);
+    	
+       for(int i = 0; i < 30; i++){
+            if(palavra1[i] == '\0'){
+                break;
+            }else{
+                palavra3[i] = palavra1[i];
+                conta++;
+            }
+        }
+
+            palavra3[conta] = ' ';
+            conta++;
+
+        for(int i = conta; i < 30; i++, j++){
+            if(palavra2[j] == '\0'){
+                break;
+            }else{
+                palavra3[i] = palavra2[j];
+            }
+        }
+
+        for(int i = 0; i < 30; i++){
+            if(palavra3[i] == '\0'){
+                break;
+            }else{
+                printf("%c", palavra3[i]);
+            }
+            
+        }
+
+		break;
+	}
+
+	case 26:{
+		
+		char nomes [10][50];
+		int limit = 0;
+		
+		system("cls");
+		printf("Vamos passar uma lista de nomes para maiusculos! \n");
+		
+		printf("Digite quantos nomes voce vai digitar (limite de 10): ");
+		scanf("%i", &limit);
+		
+		while(limit < 0 || limit > 10){
+			printf("Digite um numero maior que 0 ou menor ou igual a 10");
+			scanf("%i", &limit);
+		}
+		
+		for(int i = 0; i < limit; i++){
+			printf("Digite o nome %i: ", i+1);
+			scanf("%s", nomes[i]);
+			
+			strupr(nomes[i]);
+		}
+		
+		for(int i = 0; i < limit; i++){
+			printf("\n %s", nomes[i]);
+	
+		}
+		
+		break;
+	}
+	
+	case 27:{
+		
+		system("cls");
+		
+		int matriz[3][5];
+		int multiplica = 0;
+		int resultado;
+		
+		printf("\nVamos Multiplicar uma Matriz de inteiros");
+		printf("\nDigite o multiplicador: ");
+		scanf("%i", &multiplica);
+		
+		for(int i = 0; i < 3; i++){
+			for(int j = 0; j < 5; j++){
+				printf("Digite o numero: ");
+				scanf("%i", &matriz[i][j]);
+			}
+			printf("\n");
+		}
+		
+		printf("\nNumeros digitados: \n");
+		for(int i = 0; i < 3; i++){
+			for(int j = 0; j < 5; j++){
+				printf(" %i ", matriz[i][j]);
+			}
+			printf("\n");
+		}
+		
+		printf("\n Numeros multiplicados \n");
+		for(int i = 0; i < 3; i++){
+			for(int j = 0; j < 5; j++){
+				matriz[i][j] *= multiplica;
+				printf(" %i ", matriz[i][j]);
+			}
+			printf("\n");
+		}
+		
+		break;
+	}
+	case 28:{
+		
+		int matriz1[3][5];
+		int matriz2[3][5];
+		int resultado[3][5];
+		
+		system("cls");
+		
+		printf("\nEscreva duas matrizes e veja sua soma; \n");
+		
+		printf("Digite a Primeira matriz: \n");
+		for(int i = 0; i < 3; i++){
+			for(int j = 0; i < 5; i++){
+				printf("\nDigite um numero: ");
+				scanf("%i", &matriz1[i][j]);
+			}
+			printf("\n");
+		}
+		
+		printf("\nDigite a segunda matriz: \n");
+		for(int i = 0; i < 3; i++){
+			for(int j = 0; i < 5; i++){
+				printf("\nDigite um numero: ");
+				scanf("%i", &matriz2[i][j]);
+			}
+			printf("\n");
+		}
+		
+		printf("Digite a Primeira matriz: \n");
+		for(int i = 0; i < 3; i++){
+			for(int j = 0; i < 5; i++){
+				resultado[i][j] = matriz1[i][j] + matriz2[i][j];
+			}
+		}
+				
+		printf("\nA soma das Matrizes eh: \n");
+		for(int i = 0; i < 3; i++){
+			for(int j = 0; i < 5; i++){
+				printf(" %i ", resultado[i][j]);
+			}
+			printf("\n");
+		}
+		
+		break;
+	}
+	case 29:{
+		
+		int matriz1[3][5];
+		int matriz2[3][5];
+		int resultado[3][5];
+		
+		system("cls");
+		
+		printf("\nEscreva duas matrizes e veja sua subtracao; \n");
+		
+		printf("Digite a Primeira matriz: \n");
+		for(int i = 0; i < 3; i++){
+			for(int j = 0; i < 5; i++){
+				printf("\nDigite um numero: ");
+				scanf("%i", &matriz1[i][j]);
+			}
+			printf("\n");
+		}
+		
+		printf("\nDigite a segunda matriz: \n");
+		for(int i = 0; i < 3; i++){
+			for(int j = 0; i < 5; i++){
+				printf("\nDigite um numero: ");
+				scanf("%i", &matriz2[i][j]);
+			}
+			printf("\n");
+		}
+		
+		printf("Digite a Primeira matriz: \n");
+		for(int i = 0; i < 3; i++){
+			for(int j = 0; i < 5; i++){
+				resultado[i][j] = matriz1[i][j] - matriz2[i][j];
+			}
+		}
+				
+		printf("\n A subtracao das Matrizes eh: \n");
+		for(int i = 0; i < 3; i++){
+			for(int j = 0; i < 5; i++){
+				printf(" %i ", resultado[i][j]);
+			}
+			printf("\n");
+		}
+		
+		break;
+	}
+	
+	case 30:{
+		
+		int matriz1[3][5];
+		int matriz2[3][5];
+		int resultado[3][5];
+		
+		system("cls");
+		
+		printf("\nEscreva duas matrizes e veja sua multiplicacao; \n");
+		
+		printf("Digite a Primeira matriz: \n");
+		for(int i = 0; i < 3; i++){
+			for(int j = 0; i < 5; i++){
+				printf("\nDigite um numero: ");
+				scanf("%i", &matriz1[i][j]);
+			}
+			printf("\n");
+		}
+		
+		printf("\nDigite a segunda matriz: \n");
+		for(int i = 0; i < 3; i++){
+			for(int j = 0; i < 5; i++){
+				printf("\nDigite um numero: ");
+				scanf("%i", &matriz2[i][j]);
+			}
+			printf("\n");
+		}
+		
+		printf("Digite a Primeira matriz: \n");
+		for(int i = 0; i < 3; i++){
+			for(int j = 0; i < 5; i++){
+				resultado[i][j] = matriz1[i][j] * matriz2[i][j];
+			}
+		}
+				
+		printf("\n A mutiplicacao das Matrizes eh: \n");
+		for(int i = 0; i < 3; i++){
+			for(int j = 0; i < 5; i++){
+				printf(" %i ", resultado[i][j]);
+			}
+			printf("\n");
+		}
+		
+		break;
+		
+	}
+    
+    case 31:{
+	
         system("cls");
 
         printf("Caixa de Texto limpo! \n");
         break;
     }
 
-    case 27:{
+    case 32:{
 
         system("cls");
-
         printf("Programa Finalizado! ");
         break;
     }
