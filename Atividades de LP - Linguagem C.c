@@ -64,6 +64,7 @@ switch(opcao){
         double media;
         double pf;
 
+        system("cls");
 
         printf("Vamos calcular a sua Media: \n");
 		
@@ -161,9 +162,8 @@ switch(opcao){
         double pf;
         double mediaF;
 
-
+        system("cls");
         printf(" Vamos calcular a sua Media: ");
-
 
         printf("\n Digite a nota da P1: ");
         scanf("%lf", &p1);
@@ -262,8 +262,7 @@ switch(opcao){
         double produto;
         char opcao; 
 
-
-
+            system("cls");
             printf(" Vamos fazer compras e veja as opcoes de Desconto: ");
             printf("\n\n Digite o valor do produto que voce quer comprar: ");
             scanf("%lf", &produto);
@@ -315,10 +314,11 @@ switch(opcao){
     case 4:{
 
 
-
+            system("cls");
             double produto;
             int opcao; 
 
+            system("cls");
             printf(" Vamos fazer compras e veja as opcoes de Desconto: ");
             printf("\n\n Digite o valor do produto que voce quer comprar: ");
             scanf("%lf", &produto);
@@ -381,11 +381,12 @@ switch(opcao){
 
     case 5:{
 
-
+            system("cls");
             long fatorial = 1;
             int a;
             int b = 1;
 
+            system("cls");
 
             printf("Vamos Calcular a Fatorial de um Numero! \n");
             printf("Digite um numero: ");
@@ -420,6 +421,7 @@ switch(opcao){
         int c = 0;
         int i = 1;
 
+        system("cls");
         printf(" Vamos ver a sequencia de Fibonacci: \n");
         printf(" Digite um numero para ser o termo da sequencia: ");
         scanf("%i", &num);
@@ -456,8 +458,7 @@ switch(opcao){
         int limit = 0;
         int i = 0;
 
-
-
+        system("cls");
         printf("Vamos Calcular a P.A de um numero positivo! \n");
         printf("\n Digite um numero Para ser A1: ");
         scanf("%i", &a1);
@@ -489,6 +490,7 @@ switch(opcao){
         int a;
         int b = 1;
 
+        system("cls");
         printf("Vamos Calcular a Fatorial de um Numero (com While)! \n");
         printf("Digite um numero: ");
         scanf("%i", &a);
@@ -523,6 +525,7 @@ switch(opcao){
         int c = 0;
         int i = 1;
 
+        system("cls");
         printf(" Vamos ver a sequencia de Fibonacci (com While): \n");
         printf(" Digite um numero para ser o termo da sequencia: ");
         scanf("%i", &num);
@@ -556,6 +559,7 @@ switch(opcao){
         int limit = 0;
         int i = 0;
 
+        system("cls");
         printf("Vamos Calcular a P.A (com While) de um numero positivo! \n");
         printf("\n Digite um numero Para ser A1: ");
         scanf("%i", &a1);
@@ -577,7 +581,6 @@ switch(opcao){
         }
 
         break;
-
     }
 
         case 11:{
@@ -585,7 +588,8 @@ switch(opcao){
         long fatorial = 1;
         int a;
         int b = 1;
-
+        
+        system("cls");
         printf("Vamos Calcular a Fatorial de um Numero (com For)! \n");
         printf("Digite um numero: ");
         scanf("%i", &a);
@@ -611,12 +615,13 @@ switch(opcao){
 
         case 12:{
 
-                int num;
+        int num;
         int a = 0;
         int b = 1;
         int c = 0;
         int i = 1;
-
+        
+        system("cls");
         printf(" Vamos ver a sequencia de Fibonacci (com For): \n");
         printf(" Digite um numero para ser o termo da sequencia: ");
         scanf("%i", &num);
@@ -636,7 +641,7 @@ switch(opcao){
             }
         }
 
-                break;
+            break;
         }
 
         case 13:{
@@ -645,7 +650,8 @@ switch(opcao){
         int R =0;
         int limit = 0;
         int i = 0;
-
+        
+        system("cls");
         printf("Vamos Calcular a P.A (com For) de um numero positivo! \n");
         printf("\n Digite um numero Para ser A1: ");
         scanf("%i", &a1);
@@ -676,6 +682,7 @@ switch(opcao){
                 int num = 0;
                 int maior = 0;
 
+                system("cls");
                 printf("Vamos descobrir qual eh o maior numero! \n"
                 "Digite a quantidade de numeros que voce quer avaliar: ");
                 scanf("%i", &limit);
@@ -684,24 +691,24 @@ switch(opcao){
 
                 while(cont < limit){
 
-                        printf("Digite um numero: ");
-                        scanf("%i", &num);
+                    printf("Digite um numero: ");
+                    scanf("%i", &num);
 
-                        if (num > maior){
-                                maior = num;
-                        }
+                    if (num > maior){
+                        maior = num;
+                    }
 
-                        list[cont] = num;
-                        cont++;
+                    list[cont] = num;
+                    cont++;
                 }
-                        printf("O maior numero eh: %i \n", maior);
+                    printf("O maior numero eh: %i \n", maior);
 
-                        cont = 0;
+                    cont = 0;
 
-                        printf("\nA lista de todos os numeros digitados eh: ");
-                        for(limit; cont < limit; cont++){
-                                printf("%i ", list[cont]);
-                        }
+                    printf("\nA lista de todos os numeros digitados eh: ");
+                    for(limit; cont < limit; cont++){
+                        printf("%i ", list[cont]);
+                    }
 
                 break;
         }
@@ -714,6 +721,7 @@ switch(opcao){
                 int num = 0;
                 int menor = 0;
 
+                system("cls");
                 printf("Vamos descobrir qual eh o menor numero! \n"
                 "Digite a quantidade de numeros que voce quer avaliar ate (30): ");
                 scanf("%i", &limit);
@@ -729,25 +737,25 @@ switch(opcao){
 
                 while(cont < limit){
 
-                        printf("Digite um numero: ");
-                        scanf("%i", &num);
+                    printf("Digite um numero: ");
+                    scanf("%i", &num);
 
-                        if (num < menor){
-                                menor = num;
-                        }
+                    if (num < menor){
+                        menor = num;
+                    }
 
-                        lista[cont] = num;
+                    lista[cont] = num;
 
-                        cont++;
+                    cont++;
 
                 }
-                        printf("O menor numero eh: %i \n", menor);
+                     printf("O menor numero eh: %i \n", menor);
 
-                        cont = 0;
+                    cont = 0;
 
-                        printf("\nA lista de todos os numeros digitados eh: ");
+                    printf("\nA lista de todos os numeros digitados eh: ");
                         for(limit; cont  < limit; cont++){
-                                printf("%i ", lista[cont]);
+                            printf("%i ", lista[cont]);
                         }
 
                 break;
@@ -755,14 +763,15 @@ switch(opcao){
 
         case 16:{
 
-                int vetor[30];
-                int num = 0;
-                int limit = 0;
-                int cont = 0;
-
-                printf("Vamos mostrar a ordem inversa da lista de valores");
-                printf("\n Digite o limite de numeros da lista ate (30): ");
-                scanf("%i", &limit);
+        int vetor[30];
+        int num = 0;
+        int limit = 0;
+        int cont = 0;
+        
+        system("cls");
+        printf("Vamos mostrar a ordem inversa da lista de valores");
+        printf("\n Digite o limite de numeros da lista ate (30): ");
+        scanf("%i", &limit);
 
         for(cont = 0;cont < limit ; cont++ ){
 
@@ -790,6 +799,7 @@ switch(opcao){
         int resultado;
         int i = 0;
 
+        system("cls");
         printf("Vamos fazer uma lista de 10 valores e mutiplica-lo por outro: \n");
 
         for(i = 0; i < 10; i++){
@@ -817,6 +827,7 @@ switch(opcao){
     	double resultado;
 		double lista[30];
     	
+        system("cls");
     	printf("Digite uma lista de ate 30 numeros e multiplique pelo expoente: \n ");
     	printf("\nDigite o tamanho da lista: ");
     	scanf("%i", &limit);
@@ -839,7 +850,7 @@ switch(opcao){
 		for(int i = 0; i < limit; i++){
     	
 		resultado = pow(lista[i],expo);
-		printf("%i) %.2lf \n", i,resultado);	
+		printf("%i) %.2lf \n", i+1,resultado);	
     		
 		}
 		
@@ -854,6 +865,7 @@ switch(opcao){
     	double resultado;
 		double lista[30]; 
     	
+        system("cls");
     	printf("Vamos Ler uma lista de ate 30 valores e exibir a sua raiz: \n ");
     	printf("\nDigite o tamanho da lista: ");
     	scanf("%i", &limit);
@@ -923,7 +935,6 @@ switch(opcao){
         int compara = 0;
 
         system("cls");
-
         printf("\nVamos descobrir se uma palavra eh palindromo: \n");
         printf("Digite a palavra: ");
         scanf("%s", palavra1); 
