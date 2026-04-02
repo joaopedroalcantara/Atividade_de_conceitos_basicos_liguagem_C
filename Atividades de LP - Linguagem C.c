@@ -1179,7 +1179,7 @@ switch(opcao){
 		
 		printf("Digite a Primeira matriz: \n");
 		for(int i = 0; i < 3; i++){
-			for(int j = 0; i < 5; i++){
+			for(int j = 0; j < 5; j++){
 				printf("\nDigite um numero: ");
 				scanf("%i", &matriz1[i][j]);
 			}
@@ -1188,7 +1188,7 @@ switch(opcao){
 		
 		printf("\nDigite a segunda matriz: \n");
 		for(int i = 0; i < 3; i++){
-			for(int j = 0; i < 5; i++){
+			for(int j = 0; j < 5; j++){
 				printf("\nDigite um numero: ");
 				scanf("%i", &matriz2[i][j]);
 			}
@@ -1197,14 +1197,14 @@ switch(opcao){
 		
 		printf("Digite a Primeira matriz: \n");
 		for(int i = 0; i < 3; i++){
-			for(int j = 0; i < 5; i++){
+			for(int j = 0; j < 5; j++){
 				resultado[i][j] = matriz1[i][j] + matriz2[i][j];
 			}
 		}
 				
 		printf("\nA soma das Matrizes eh: \n");
 		for(int i = 0; i < 3; i++){
-			for(int j = 0; i < 5; i++){
+			for(int j = 0; j < 5; j++){
 				printf(" %i ", resultado[i][j]);
 			}
 			printf("\n");
@@ -1224,7 +1224,7 @@ switch(opcao){
 		
 		printf("Digite a Primeira matriz: \n");
 		for(int i = 0; i < 3; i++){
-			for(int j = 0; i < 5; i++){
+			for(int j = 0; j < 5; j++){
 				printf("\nDigite um numero: ");
 				scanf("%i", &matriz1[i][j]);
 			}
@@ -1233,7 +1233,7 @@ switch(opcao){
 		
 		printf("\nDigite a segunda matriz: \n");
 		for(int i = 0; i < 3; i++){
-			for(int j = 0; i < 5; i++){
+			for(int j = 0; j < 5; j++){
 				printf("\nDigite um numero: ");
 				scanf("%i", &matriz2[i][j]);
 			}
@@ -1242,14 +1242,14 @@ switch(opcao){
 		
 		printf("Digite a Primeira matriz: \n");
 		for(int i = 0; i < 3; i++){
-			for(int j = 0; i < 5; i++){
+			for(int j = 0; j < 5; j++){
 				resultado[i][j] = matriz1[i][j] - matriz2[i][j];
 			}
 		}
 				
 		printf("\n A subtracao das Matrizes eh: \n");
 		for(int i = 0; i < 3; i++){
-			for(int j = 0; i < 5; i++){
+			for(int j = 0; j < 5; j++){
 				printf(" %i ", resultado[i][j]);
 			}
 			printf("\n");
@@ -1270,7 +1270,7 @@ switch(opcao){
 		
 		printf("Digite a Primeira matriz: \n");
 		for(int i = 0; i < 3; i++){
-			for(int j = 0; i < 5; i++){
+			for(int j = 0; j < 5; j++){
 				printf("\nDigite um numero: ");
 				scanf("%i", &matriz1[i][j]);
 			}
@@ -1279,7 +1279,7 @@ switch(opcao){
 		
 		printf("\nDigite a segunda matriz: \n");
 		for(int i = 0; i < 3; i++){
-			for(int j = 0; i < 5; i++){
+			for(int j = 0; j < 5; j++){
 				printf("\nDigite um numero: ");
 				scanf("%i", &matriz2[i][j]);
 			}
@@ -1288,14 +1288,14 @@ switch(opcao){
 		
 		printf("Digite a Primeira matriz: \n");
 		for(int i = 0; i < 3; i++){
-			for(int j = 0; i < 5; i++){
+			for(int j = 0; j < 5; j++){
 				resultado[i][j] = matriz1[i][j] * matriz2[i][j];
 			}
 		}
 				
 		printf("\n A mutiplicacao das Matrizes eh: \n");
 		for(int i = 0; i < 3; i++){
-			for(int j = 0; i < 5; i++){
+			for(int j = 0; j < 5; j++){
 				printf(" %i ", resultado[i][j]);
 			}
 			printf("\n");
