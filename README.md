@@ -1,52 +1,121 @@
-# Atividade_de_conceitos_basicos_liguagem_C
+📘 Atividade de Conceitos Básicos em Linguagem C
 
-📌Sobre o Projeto📌
+📌 Sobre o Projeto
 
-Este projeto é um programa em Linguagem C que reúne vários exercícios de lógica dentro de um menu interativo.
+Este projeto é um programa desenvolvido em Linguagem C que reúne diversos exercícios fundamentais de programação dentro de um menu interativo com 32 opções.
+O sistema permite ao usuário escolher diferentes funcionalidades, abrangendo desde cálculos matemáticos simples até manipulação de strings, vetores e matrizes.
+O objetivo principal foi centralizar vários exercícios clássicos de lógica em um único programa, simulando um pequeno sistema completo em modo console.
 
-A ideia foi juntar exercícios comuns do início dos estudos em programação, como fatorial, sequência de Fibonacci, 
-média de aluno, progressão aritmética e manipulação de listas de números.
+🎯 Objetivo
 
-O usuário escolhe uma opção no menu e o programa executa o exercício correspondente.
-
-
-🎯Objetivo🎯
-
-O projeto tem como objetivo praticar conceitos básicos da programação estruturada em C, como:
+Praticar e consolidar os principais conceitos da programação estruturada em C, incluindo:
 
 Estruturas condicionais (if, else if, else)
-
 Estrutura de seleção (switch case)
-
 Estruturas de repetição (for, while, do while)
-
 Manipulação de vetores (arrays)
+Manipulação de matrizes
+Manipulação de strings
+Uso de bibliotecas como:
+<stdio.h>
+<stdlib.h>
+<math.h>
+<string.h>
+Entrada e saída de dados (scanf e printf)
+Organização de código com menu interativo
 
-Entrada e saída de dados com scanf e printf
+⚙️ Funcionalidades
 
-Organização do código utilizando menu interativo
+O programa possui um menu com 32 opções, organizadas por tipo de exercício:
 
+📊 Cálculos Acadêmicos
 
-⚙️Funcionalidades⚙️
-
-O menu do programa possui várias opções de exercícios, como:
-
-Cálculo de média semestral estilo Fatec
-
+Média semestral estilo Fatec (2 versões)
 Verificação de aprovação, recuperação ou reprovação
 
-Cálculo de descontos em produtos
+💰 Operações Comerciais
 
-Fatorial de um número
+Cálculo de descontos com if/else
+Cálculo de descontos com switch case
 
-Sequência de Fibonacci
+🔢 Matemática Básica
 
-Progressão Aritmética (P.A.)
+Fatorial (do while, while, for)
+Sequência de Fibonacci (do while, while, for)
+Progressão Aritmética (P.A.) (do while, while, for)
 
-Descobrir o maior número de uma lista
+📋 Manipulação de Vetores
 
-Descobrir o menor número
+Encontrar maior número
+Encontrar menor número
+Exibir lista em ordem inversa
+Multiplicar lista por um número
+Lista com exponenciação
+Lista com raiz quadrada
 
-Ler vários números e mostrar em ordem inversa
+🔤 Manipulação de Strings
 
-Multiplicar todos os valores de uma lista por um número
+Comparar duas strings
+Verificar palíndromo (palavra)
+Verificar palíndromo (frase)
+Converter para maiúsculo
+Converter para minúsculo
+Concatenar strings
+Lista de nomes em maiúsculo
+
+🔢 Matrizes
+
+Multiplicar matriz por escalar
+Soma de matrizes
+Subtração de matrizes
+Multiplicação elemento a elemento
+
+🧹 Utilidades
+Limpar tela
+Encerrar programa
+
+🖥️ Como Executar
+
+🔧 Pré-requisitos:
+Compilador C (GCC recomendado)
+▶️ Compilação:
+gcc main.c -o programa
+▶️ Execução:
+./programa
+
+📚 Estrutura do Projeto
+
+O programa é composto por:
+
+Um while principal que mantém o menu ativo
+Um switch case com 32 opções
+Blocos de código separados por funcionalidade
+Uso intensivo de loops e condicionais
+
+🚀 Aprendizados
+
+Com este projeto, é possível praticar:
+
+Lógica de programação
+Organização de código
+Interação com o usuário via terminal
+Resolução de problemas clássicos
+Diferenças entre estruturas de repetição
+Manipulação de dados em diferentes formatos
+
+⚠️ Observações
+
+O programa utiliza system("cls"), que funciona no Windows
+Algumas funções como strupr() podem não funcionar em todos os compiladores
+O fflush(stdin) não é recomendado em C padrão (pode variar por compilador)
+
+📌 Possíveis Melhorias
+
+Modularização do código (uso de funções)
+Melhor validação de entrada de dados
+Interface mais amigável
+Separação por arquivos (.h e .c)
+Implementação de estruturas de dados mais avançadas.
+
+
+Projeto feito por www.linkedin.com/in/joaopedroalcantara-dev
