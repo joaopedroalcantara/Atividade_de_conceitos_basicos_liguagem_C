@@ -1382,9 +1382,12 @@ switch(opcao){
         int j = 0;
 
         printf("\n!!BEM VINDO AO JOGO 21!! \n");
-        printf("Voce comeca jogando e depois a mesa Jogara: \n");
+        printf("Voce comeca jogando e depois a mesa Jogara: \n\n");
 
         system("pause");
+        system("cls");
+        
+        printf("SUA VEZ:\n");
 
         for(int i = 1; i <= 13; i++){
             simbolo = 3;
@@ -1458,8 +1461,10 @@ switch(opcao){
             system("pause");
         }
 
+        system("cls");
+
         if(vitoria == 0){
-            printf("\nVez da Mesa:\n ");
+            printf("VEZ DA MESA:\n ");
 
             while(pontuacao1 >= pontuacao2){
 
@@ -1479,6 +1484,11 @@ switch(opcao){
                     printf("\nA mesa venceu !! Conseguiu a pontuacao 21 !\n");
                     vitoria = 4;
                     system("pause");
+                    break;
+
+                }else if(pontuacao2 > pontuacao1){
+                    printf("\nA mesa optou por parar por ultrapassar sua pontuacao de ( %i ) com ( %i )", pontuacao1,pontuacao2);
+                    vitoria = 4;
                     break;
 
                 }else{
