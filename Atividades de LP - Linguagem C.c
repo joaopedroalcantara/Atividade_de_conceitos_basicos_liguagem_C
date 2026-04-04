@@ -8,7 +8,7 @@ int main(){
 
 int opcao = 0;
 
-while(opcao != 32){
+while(opcao != 33){
 
 printf("\n\n********************MENU DE OPCOES******************** \n"
 "1) Media Fatec (If) \n"
@@ -42,7 +42,8 @@ printf("\n\n********************MENU DE OPCOES******************** \n"
 "29) Subtrair duas matrizes \n"
 "30) Multiplicar duas matrizes \n"
 "31) Cara ou Coroa \n"
-"32) Sair"
+"32) Jogo de cartas 21 \n"
+"33) Sair"
 
 "\nEscolha uma das Opcoes acima: ");
 
@@ -1366,6 +1367,140 @@ switch(opcao){
     }
 
     case 32:{
+        system("cls");
+
+        char cartas[13][4];
+        int valor[13][4];
+        char naipe[13][4];
+        int simbolo;
+        int num = 49;
+        int peso = 1;
+        int pontuacao1 = 0, pontuacao2 = 0;
+        int vitoria = 0;
+        int continua = 0;
+        int i = 0;
+        int j = 0;
+
+        printf("\n!!BEM VINDO AO JOGO 21!! \n");
+        printf("Voce comeca jogando e depois a mesa Jogara: \n");
+
+        system("pause");
+
+        for(int i = 1; i <= 13; i++){
+            simbolo = 3;
+
+            for(int j = 1; j <= 4; j++, simbolo++){
+                if(peso == 1){
+                    cartas[i][j] = 'A';
+                    naipe[i][j] = simbolo;
+
+                }else if (peso == 11){
+                    cartas[i][j] = 'J';
+                    naipe[i][j] = simbolo;
+
+                }else if(peso == 12){
+                    cartas[i][j] = 'Q';
+                    naipe[i][j] = simbolo;
+
+                }else if(peso == 13){
+                    cartas[i][j] = 'K';
+                    naipe[i][j] = simbolo;
+
+                }else if(peso == 10){
+                    cartas[i][j] = 'T';
+
+                }else{
+                    cartas[i][j] = num;
+                    naipe[i][j] = simbolo;
+                }
+
+                valor[i][j] = peso;
+                if(valor[i][j] >= 10){
+                    valor[i][j] = 10;
+                }
+            }
+            num++;
+            peso++;
+        }
+
+        srand(time(NULL));
+        
+        while(continua == 0){
+
+            i = (rand() % 13) + 1;
+            j = (rand() % 4) + 1;
+
+            printf("\nCarta sorteada: %c %c\n", cartas[i][j], naipe[i][j]);
+            pontuacao1 += valor[i][j];
+
+            if(pontuacao1 > 21){
+                printf("\nVoce Perdeu por estourar 21! Pontuacao de %i\n", pontuacao1);
+                system("pause");
+                continua = 2;
+                vitoria = 1;
+                break;
+                
+            }else if(pontuacao1 == 21){
+                printf("\nParabens Voce venceu !! Conseguiu a pontuacao 21 !\n");
+                system("pause");
+                vitoria = 2;
+                break;
+
+            }else{
+                printf("\nSua pontuacao esta em: %i\n", pontuacao1);
+                printf("Deseja Continuar - SIM (0) NAO (1): ");
+                scanf("%i", &continua);
+            }
+        }
+        
+        if(continua == 1){
+            printf("\nVoce optou por parar com ( %i ) pontos \n", pontuacao1);
+            system("pause");
+        }
+
+        if(vitoria == 0){
+            printf("\nVez da Mesa:\n ");
+
+            while(pontuacao1 >= pontuacao2){
+
+                i = (rand() % 13) + 1;
+                j = (rand() % 4) + 1;
+
+                printf("\nCarta sorteada: %c %c\n", cartas[i][j], naipe[i][j]);
+                pontuacao2 += valor[i][j];
+
+                if(pontuacao2 > 21){
+                    printf("\nA mesa Perdeu por estourar 21 pontos ! Pontuacao de %i\n", pontuacao2);
+                    system("pause");
+                    vitoria = 3;
+                    break;
+
+                }else if(pontuacao2 == 21){
+                    printf("\nA mesa venceu !! Conseguiu a pontuacao 21 !\n");
+                    vitoria = 4;
+                    system("pause");
+                    break;
+
+                }else{
+                    printf("Pontuacao da mesa esta em: %i\n", pontuacao2);
+                    system("pause");
+                }
+                
+            }
+        }
+
+        if(vitoria == 2 || vitoria == 3){
+            printf("\nVOCE Ganhou essa partida!!\n");
+            system("pause");
+        }else if(vitoria == 1 || vitoria == 4){
+            printf("\nA MESA Ganhou essa partida!!\n");
+            system("pause");
+        }
+
+        break;
+    }
+
+    case 33:{
 
         system("cls");
         printf("Programa Finalizado! ");
