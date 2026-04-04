@@ -40,7 +40,7 @@ printf("\n\n********************MENU DE OPCOES******************** \n"
 "28) Somar duas matrizes \n"
 "29) Subtrair duas matrizes \n"
 "30) Multiplicar duas matrizes \n"
-"31) Limpa caixa de texto \n"
+"31) Cara ou Coroa \n"
 "32) Sair"
 
 "\nEscolha uma das Opcoes acima: ");
@@ -1317,11 +1317,29 @@ switch(opcao){
 	}
     
     case 31:{
-	
-        system("cls");
 
-        printf("Caixa de Texto limpo! \n");
+        system ("cls");
+
+        int limit = 0;
+        char jogadas[30];
+        char regra;
+
+        printf("Cara (%c) Coroa (%c) \n", regra = 1, regra = 2);
+        printf("Digite a quantidade de vezes que vou jogar a moeda (Ate 30): ");
+        scanf("%i", &limit);
+
+        srand(time(NULL));
+
+        for(int i = 0; i < limit; i++){
+            jogadas[i] = (rand() % 2) + 1;
+        }
+
+        for(int i = 0; i < limit; i++){
+            printf("A jogada %i = %c\n", i+1, jogadas[i]);
+        }
+
         break;
+
     }
 
     case 32:{
