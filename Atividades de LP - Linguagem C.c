@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include <math.h>
 #include <string.h>
 
@@ -1322,11 +1323,18 @@ switch(opcao){
 
         int limit = 0;
         char jogadas[30];
-        char regra;
+        int cara = 0, coroa = 0;
 
-        printf("Cara (%c) Coroa (%c) \n", regra = 1, regra = 2);
+        printf("Cara (1) Coroa (2) \n");
         printf("Digite a quantidade de vezes que vou jogar a moeda (Ate 30): ");
         scanf("%i", &limit);
+
+        while(limit > 30 || limit < 1){
+            printf("\nO numero deve ser maior que 0 e menor ou igual a 30");
+            printf("\nDigite novamente: ");
+            scanf("%i", &limit);
+        }
+        
 
         srand(time(NULL));
 
@@ -1335,7 +1343,22 @@ switch(opcao){
         }
 
         for(int i = 0; i < limit; i++){
-            printf("A jogada %i = %c\n", i+1, jogadas[i]);
+            if (jogadas[i] == 1){  
+                printf("A jogada %i = Cara \n", i+1, jogadas[i]);
+                cara++;
+            }else{
+                printf("A jogada %i = Coroa \n", i+1, jogadas[i]);
+                coroa++;
+            }
+        }
+
+        printf("\nTotal de Cara: %i \nTotal de Coroa: %i", cara,coroa);
+        if(cara > coroa){
+            printf("\nCara Ganhou!");
+        }else if(cara == coroa){
+             printf("\nEmpate!");
+        }else{
+            printf("\nCoroa Ganhou!");
         }
 
         break;
