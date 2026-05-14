@@ -4,58 +4,9 @@
 #include <math.h>
 #include <string.h>
 
-int main(){
+	void botao1(){
 
-int opcao = 0;
-
-while(opcao != 33){
-
-printf("\n\n********************MENU DE OPCOES******************** \n"
-"1) Media Fatec (If) \n"
-"2) Media Fatec (if/else/else if) \n"
-"3) AJuste de Preco (if/else/else if) \n"
-"4) AJuste de Preco (Switch case) \n"
-"5) Fatorial (do/while) \n"
-"6) Fibonacci (do/while) \n"
-"7) P.A (do while) \n"
-"8) Fatorial (while) \n"
-"9) Fibonacci (while) \n"
-"10) P.A (while) \n"
-"11) Fatorial (for) \n"
-"12) Fibonacci (for) \n"
-"13) P.A (for) \n"
-"14) Encontrar o maior numero \n"
-"15) Encontrar o menor numero \n"
-"16) Ler um conjunto de valores e imprimir a ordem inversa \n"
-"17) Ler um conjunto de valores e um multiplicar e exibir os resultados \n"
-"18) Lista de valores em exponencicao \n"
-"19) Lista de valores em raiz quadrada \n"
-"20) Comparar strings (Iguais ou Diferentes?)  \n"
-"21) Indentifica palindromo \n"
-"22) Indentifica palindromos multi-frases \n"
-"23) Passar string para maiuscuo \n"
-"24) Passar string para minusculo \n"
-"25) Concatena duas strings \n"
-"26) Conjunto de nomes exibido em maiusculo \n"
-"27) Multiplica matriz de numeros \n"
-"28) Somar duas matrizes \n"
-"29) Subtrair duas matrizes \n"
-"30) Multiplicar duas matrizes \n"
-"31) Cara ou Coroa \n"
-"32) Jogo de cartas 21 \n"
-"33) Sair"
-
-"\nEscolha uma das Opcoes acima: ");
-
-scanf("%i", &opcao);
-
-fflush(stdin);
-
-switch(opcao){
-
-    case 1:{
-
-        double p1;
+		double p1;
         double t1;
         double b1;
 
@@ -145,14 +96,11 @@ switch(opcao){
 
         } 
 
-        break;
-
-    }
-
-
-    case 2:{
-
-        double p1;
+	}
+	
+	botao2(){
+		
+		double p1;
         double t1;
         double b1;
 
@@ -254,15 +202,13 @@ switch(opcao){
 
         }
 
-        break;
+		
+	}
+	
+	void botao3(){
 
-    }
-
-
-    case 3:{
-
-        double produto;
-        char opcao; 
+		double produto;
+	    char opcao; 
 
             system("cls");
             printf(" Vamos fazer compras e veja as opcoes de Desconto: ");
@@ -308,15 +254,11 @@ switch(opcao){
 
             }
 
+	}
+	
+	void botao4(){
 
-        break;
-
-    }   
-
-    case 4:{
-
-
-            system("cls");
+		system("cls");
             double produto;
             int opcao; 
 
@@ -377,13 +319,11 @@ switch(opcao){
 
         }
 
-        break;
+	}
+	
+	void botao5(){
 
-    }
-
-    case 5:{
-
-            system("cls");
+		system("cls");
             long fatorial = 1;
             int a;
             int b = 1;
@@ -411,13 +351,11 @@ switch(opcao){
 
             }
 
-        break;
+	}
+	
+	void botao6(){
 
-    }
-
-    case 6:{
-
-        int num;
+		int num;
         int a = 0;
         int b = 1;
         int c = 0;
@@ -446,16 +384,44 @@ switch(opcao){
             } while(i <= num);
 
         }
-        break;
+	}
+	
+	void botao7(){
 
-    }
+		 int num;
+        int a = 0;
+        int b = 1;
+        int c = 0;
+        int i = 1;
 
+        system("cls");
+        printf(" Vamos ver a sequencia de Fibonacci: \n");
+        printf(" Digite um numero para ser o termo da sequencia: ");
+        scanf("%i", &num);
 
-    case 7:{
+        if (num <= 0){
 
+            printf("Nao existe fibonacci de termo negativo! ");
 
+        } else{
 
-        int a1 =0;
+            do{
+
+                printf(" %i - ", a);
+                c = a;
+                a = b;
+                b += c;
+
+                i++;
+
+            } while(i <= num);
+
+        }
+	}
+	
+	void botao8(){
+
+		int a1 =0;
         int R =0;
         int limit = 0;
         int i = 0;
@@ -481,47 +447,11 @@ switch(opcao){
 
         } while(i <= limit);
 
-        break;
-
-    }
-
-
-    case 8:{
-
-        long fatorial = 1;
-        int a;
-        int b = 1;
-
-        system("cls");
-        printf("Vamos Calcular a Fatorial de um Numero (com While)! \n");
-        printf("Digite um numero: ");
-        scanf("%i", &a);
-
-            if(a < 0){
-
-                printf ("Nao existe essa fatorial: \n");
-
-            } else{
-
-                while(b <= a){
-
-                    fatorial *= b;
-                    b++;
-
-                };
-
-                printf("A fatorial de %i eh:  %li", a, fatorial);
-
-            }
-
-        break;
-    }
-
-    case 9:{
-
-
-
-        int num;
+	}
+	
+	void botao9(){
+		
+		int num;
         int a = 0;
         int b = 1;
         int c = 0;
@@ -549,14 +479,11 @@ switch(opcao){
             }
         }
 
-        break;
+	}
+	
+	void botao10(){
 
-    }
-
-
-    case 10:{
-
-        int a1 =0;
+		int a1 =0;
         int R =0;
         int limit = 0;
         int i = 0;
@@ -582,12 +509,11 @@ switch(opcao){
 
         }
 
-        break;
-    }
+	}
+	
+	void botao11(){
 
-        case 11:{
-
-        long fatorial = 1;
+		long fatorial = 1;
         int a;
         int b = 1;
         
@@ -612,10 +538,9 @@ switch(opcao){
 
             }
 
-                break;
-        }
+	}
 
-        case 12:{
+    void botao12(){
 
         int num;
         int a = 0;
@@ -643,10 +568,10 @@ switch(opcao){
             }
         }
 
-            break;
-        }
+    }
 
-        case 13:{
+
+    void botao13(){
 
         int a1 =0;
         int R =0;
@@ -671,99 +596,96 @@ switch(opcao){
             a1 += R;
 
         }
+    }
 
-         break;
+    void botao14(){
 
-        }
+        int list[30];
+        int limit = 0;
+        int cont = 0;
+        int num = 0;
+        int maior = 0;
 
-        case 14:{
+        system("cls");
+        printf("Vamos descobrir qual eh o maior numero! \n"
+        "Digite a quantidade de numeros que voce quer avaliar: ");
+        scanf("%i", &limit);
 
-                int list[30];
-                int limit = 0;
-                int cont = 0;
-                int num = 0;
-                int maior = 0;
+        fflush(stdin);
 
-                system("cls");
-                printf("Vamos descobrir qual eh o maior numero! \n"
-                "Digite a quantidade de numeros que voce quer avaliar: ");
-                scanf("%i", &limit);
+        while(cont < limit){
 
-                fflush(stdin);
+            printf("Digite um numero: ");
+            scanf("%i", &num);
 
-                while(cont < limit){
+            if (num > maior){
+                maior = num;
+            }
 
-                    printf("Digite um numero: ");
-                    scanf("%i", &num);
+            list[cont] = num;
+            cont++;
+            }
 
-                    if (num > maior){
-                        maior = num;
-                    }
+            printf("O maior numero eh: %i \n", maior);
 
-                    list[cont] = num;
-                    cont++;
-                }
-                    printf("O maior numero eh: %i \n", maior);
+            cont = 0;
 
-                    cont = 0;
+            printf("\nA lista de todos os numeros digitados eh: ");
 
-                    printf("\nA lista de todos os numeros digitados eh: ");
-                    for(limit; cont < limit; cont++){
-                        printf("%i ", list[cont]);
-                    }
+            for(limit; cont < limit; cont++){
+                printf("%i ", list[cont]);
+            }
 
-                break;
-        }
+    }
 
-        case 15:{
+    void botao15(){
 
-                int lista[30];
-                int limit = 0;
-                int cont = 0;
-                int num = 0;
-                int menor = 0;
+        int lista[30];
+        int limit = 0;
+        int cont = 0;
+        int num = 0;
+        int menor = 0;
 
-                system("cls");
-                printf("Vamos descobrir qual eh o menor numero! \n"
-                "Digite a quantidade de numeros que voce quer avaliar ate (30): ");
-                scanf("%i", &limit);
+        system("cls");
+        printf("Vamos descobrir qual eh o menor numero! \n"
+        "Digite a quantidade de numeros que voce quer avaliar ate (30): ");
+        scanf("%i", &limit);
 
-                fflush(stdin);
+        fflush(stdin);
 
-                printf("Digite um numero: ");
-                scanf("%i", &num);
+        printf("Digite um numero: ");
+        scanf("%i", &num);
+        menor = num;
+        lista[cont] = num;
+        cont++;
+
+
+        while(cont < limit){
+
+            printf("Digite um numero: ");
+            scanf("%i", &num);
+
+            if (num < menor){
                 menor = num;
-                lista[cont] = num;
-                cont++;
+            }
 
+            lista[cont] = num;
+            cont++;
 
-                while(cont < limit){
-
-                    printf("Digite um numero: ");
-                    scanf("%i", &num);
-
-                    if (num < menor){
-                        menor = num;
-                    }
-
-                    lista[cont] = num;
-
-                    cont++;
-
-                }
-                     printf("O menor numero eh: %i \n", menor);
-
-                    cont = 0;
-
-                    printf("\nA lista de todos os numeros digitados eh: ");
-                        for(limit; cont  < limit; cont++){
-                            printf("%i ", lista[cont]);
-                        }
-
-                break;
         }
 
-        case 16:{
+        printf("O menor numero eh: %i \n", menor);
+
+        cont = 0;
+
+        printf("\nA lista de todos os numeros digitados eh: ");
+        for(limit; cont  < limit; cont++){
+            printf("%i ", lista[cont]);
+        }
+
+    }
+
+    void botao16(){
 
         int vetor[30];
         int num = 0;
@@ -790,10 +712,9 @@ switch(opcao){
             printf("%i ", vetor[cont]);
         }
 
-        break;
-        }
+    }
 
-    case 17:{
+    void botao17(){
 
         int vetor[10];
         int mult;
@@ -818,12 +739,11 @@ switch(opcao){
             printf("\n%i X  %i = %i ", vetor[i], mult, resultado);
         }
 
-        break;
     }
-    
-    case 18:{
-    	
-    	int expo;
+
+    void botao18(){
+
+        int expo;
     	int limit;
     	double num;
     	double resultado;
@@ -856,12 +776,11 @@ switch(opcao){
     		
 		}
 		
-		break;
-	}
-	
-	case 19:{
-		
-		int raiz;
+    }
+
+    void botao19(){
+
+        int raiz;
     	int limit;
     	double num;
     	double resultado;
@@ -890,9 +809,9 @@ switch(opcao){
 			printf("%i) %.2lf \n", i,resultado);
 		}                         
 		
-		break;
-	}
-    case 20:{
+    }
+
+    void botao20(){
 
         char palavra1[30];
     	char palavra2[30];
@@ -926,10 +845,9 @@ switch(opcao){
                 printf("As palavras sao iguais! ");
             }
 
-		break;
-	}
+    }
 
-    case 21:{
+    botao21(){
 
         char palavra1[30];
         char palavra2[30]; 
@@ -971,10 +889,9 @@ switch(opcao){
             printf("\nEh um palindromo! ");
         }
 
-        break;
     }
 
-    case 22:{
+    void botao22(){
 
         char frase1[60];
         char frase2[60]; 
@@ -1016,11 +933,10 @@ switch(opcao){
             printf("\nEh um palindromo! ");
             }
 
-        break;
     }
-    
-    case 23:{
-    	
+
+    void botao23(){
+
         char palavra[30];
 
     	system("cls");
@@ -1037,11 +953,10 @@ switch(opcao){
 
         printf("\nPalavra em maiusculo: %s" , palavra);        
 
-		break;
-	}
-    
-    case 24:{
-        
+    }
+
+    void botao24(){
+
         char palavra[30];
 
     	system("cls");
@@ -1058,12 +973,11 @@ switch(opcao){
 
         printf("\nPalavra em minusculo: %s" , palavra);     
     	
-		break;
-	}
-    
-    case 25:{
-    	
-    	char palavra1[30];
+    }
+
+    void botao25(){
+
+        char palavra1[30];
     	char palavra2[30];
         char palavra3[60];
         int i = 0;
@@ -1106,13 +1020,11 @@ switch(opcao){
             }
             
         }
+    }
 
-		break;
-	}
+    void botao26(){
 
-	case 26:{
-		
-		char nomes [10][50];
+        char nomes [10][50];
 		int limit = 0;
 		
 		system("cls");
@@ -1138,12 +1050,10 @@ switch(opcao){
 	
 		}
 		
-		break;
-	}
-	
-	case 27:{
-		
-		system("cls");
+    }
+
+    void botao27(){
+        system("cls");
 		
 		int matriz[3][5];
 		int multiplica = 0;
@@ -1178,11 +1088,11 @@ switch(opcao){
 			printf("\n");
 		}
 		
-		break;
-	}
-	case 28:{
-		
-		int matriz1[3][5];
+    }
+
+    void botao28(){
+
+        int matriz1[3][5];
 		int matriz2[3][5];
 		int resultado[3][5];
 		
@@ -1223,11 +1133,11 @@ switch(opcao){
 			printf("\n");
 		}
 		
-		break;
-	}
-	case 29:{
-		
-		int matriz1[3][5];
+    }
+
+    void botao29(){
+
+        int matriz1[3][5];
 		int matriz2[3][5];
 		int resultado[3][5];
 		
@@ -1268,12 +1178,11 @@ switch(opcao){
 			printf("\n");
 		}
 		
-		break;
-	}
-	
-	case 30:{
-		
-		int matriz1[3][5];
+    }
+
+    void botao30(){
+
+        int matriz1[3][5];
 		int matriz2[3][5];
 		int resultado[3][5];
 		
@@ -1314,11 +1223,9 @@ switch(opcao){
 			printf("\n");
 		}
 		
-		break;
-		
-	}
-    
-    case 31:{
+    }
+
+    void botao31(){
 
         system ("cls");
 
@@ -1362,11 +1269,9 @@ switch(opcao){
             printf("\nCoroa Ganhou!");
         }
 
-        break;
-
     }
 
-    case 32:{
+    void botao32(){
         system("cls");
 
         char cartas[13][4];
@@ -1507,10 +1412,377 @@ switch(opcao){
             system("pause");
         }
 
+    }
+
+    long fatorial(long a, int b){
+		
+    if(b <= 1){
+        return a;
+    }
+		
+    return fatorial(a * (b - 1), b - 1);
+    }
+
+    botao33(){
+
+
+        system("cls");
+        long a;
+	
+        printf("\nDigite o valor pra descobrir a Fatorial: ");
+        scanf("%i", &a);
+
+        int b = a;
+        long resultado = fatorial(a, b);
+
+        printf("\nFatorial de %i = %i\n", a, resultado);
+        system("pause");
+    }
+
+    int fibonacci(int limit, int a, int b, int c) {
+
+        if(limit <= 0) {
+            return 1;
+        }
+
+        printf("%i - ", a);
+
+        c = a + b;
+        a = b;
+        b = c;
+
+        fibonacci(limit - 1, a, b, c);
+
+        return 1;
+    }
+
+    botao34(){
+
+        system("cls");
+
+        int limit = 0;
+        int a = 0;
+        int b = 1;
+        int c = 0;
+
+        printf("Digite o Limite dos termos de Fibonacci: ");
+        scanf("%i", &limit);
+
+        fibonacci(limit, a, b, c);
+        system("pause");
+    }
+
+    int PA(int a, int b, int c){
+		
+		if(c <= 0) {
+			return a;
+		}
+		
+		printf("%i - ", a);
+		PA(a += b, b, c - 1);
+		
+	}
+
+    botao35(){
+
+        system("cls");
+
+        int a;
+        int b;
+        int c;
+        
+        
+        printf("\nDigite o primeiro termo da P.A: ");
+        scanf("%i", &a);
+        
+        printf("\nDigite o razao da P.A: ");
+        scanf("%i", &b);
+        
+        printf("\nDigite um Limite da P.A: ");
+        scanf("%i", &c);
+        
+        int resultado;
+        
+        PA(a,b,c);
+
+        system("\npause");
+    }
+
+
+int main(){
+
+int opcao = 0;
+
+while(opcao != 36){
+
+printf("\n\n********************MENU DE OPCOES******************** \n"
+"1) Media Fatec (If) \n"
+"2) Media Fatec (if/else/else if) \n"
+"3) AJuste de Preco (if/else/else if) \n"
+"4) AJuste de Preco (Switch case) \n"
+"5) Fatorial (do/while) \n"
+"6) Fibonacci (do/while) \n"
+"7) P.A (do while) \n"
+"8) Fatorial (while) \n"
+"9) Fibonacci (while) \n"
+"10) P.A (while) \n"
+"11) Fatorial (for) \n"
+"12) Fibonacci (for) \n"
+"13) P.A (for) \n"
+"14) Encontrar o maior numero \n"
+"15) Encontrar o menor numero \n"
+"16) Ler um conjunto de valores e imprimir a ordem inversa \n"
+"17) Ler um conjunto de valores e um multiplicar e exibir os resultados \n"
+"18) Lista de valores em exponencicao \n"
+"19) Lista de valores em raiz quadrada \n"
+"20) Comparar strings (Iguais ou Diferentes?)  \n"
+"21) Indentifica palindromo \n"
+"22) Indentifica palindromos multi-frases \n"
+"23) Passar string para maiuscuo \n"
+"24) Passar string para minusculo \n"
+"25) Concatena duas strings \n"
+"26) Conjunto de nomes exibido em maiusculo \n"
+"27) Multiplica matriz de numeros \n"
+"28) Somar duas matrizes \n"
+"29) Subtrair duas matrizes \n"
+"30) Multiplicar duas matrizes \n"
+"31) Cara ou Coroa \n"
+"32) Jogo de cartas 21 \n"
+"33) Fatorial com Recursividade \n"
+"34) Fibonacci com Recursividade \n"
+"35) PA com Recursividade \n"
+"36) Sair"
+
+"\nEscolha uma das Opcoes acima: ");
+scanf("%i", &opcao);
+
+fflush(stdin);
+
+switch(opcao){
+
+    case 1:{
+    	
+    	botao1();
+    	break;
+
+    }
+
+
+    case 2:{
+
+        botao2();
+        break;
+
+    }
+
+
+    case 3:{
+
+        botao3();
+        break;
+
+    }   
+
+    case 4:{
+
+        botao4();
+        break;
+
+    }
+
+    case 5:{
+
+        botao5();
+        break;
+
+    }
+
+    case 6:{
+
+       	botao6();
+        break;
+
+    }
+
+
+    case 7:{
+
+        botao7();
+        break;
+
+    }
+
+
+    case 8:{
+		
+		botao8();
+        break;
+    }
+
+    case 9:{
+		
+		botao9();
+        break;
+
+    }
+
+
+    case 10:{
+
+        botao10();
+        break;
+    }
+
+    case 11:{
+
+        botao11();	
+        break;
+    }
+
+    case 12:{
+
+        botao12();
+        break;
+
+    }
+
+    case 13:{
+
+        botao13();
+        break;
+    }
+
+    case 14:{
+        
+        botao14();
+        break;
+    }
+
+    case 15:{
+
+        botao15();    
+        break;
+    }
+
+    case 16:{
+
+        botao16();
+        break;
+    }
+
+    case 17:{
+
+        botao17();
+        break;
+    }
+    
+    case 18:{
+    	
+    	botao18();
+		break;
+	}
+	
+	case 19:{
+		
+		botao19();
+		break;
+	}
+    case 20:{
+
+        botao20();
+		break;
+	}
+
+    case 21:{
+
+        botao21();
+        break;
+    }
+
+    case 22:{
+
+        botao22();
+        break;
+    }
+    
+    case 23:{
+    	
+        botao22();
+		break;
+	}
+    
+    case 24:{
+        
+        botao24();
+		break;
+	}
+    
+    case 25:{
+    	
+    	botao25();
+		break;
+	}
+
+	case 26:{
+		
+		botao26();
+		break;
+	}
+	
+	case 27:{
+		
+		botao27();
+		break;
+	}
+	case 28:{
+		
+		botao28();
+		break;
+	}
+	case 29:{
+		
+		botao29();
+		break;
+	}
+	
+	case 30:{
+		
+		botao30();
+		break;
+		
+	}
+    
+    case 31:{
+
+        botao31();
+        break;
+    }
+
+    case 32:{
+
+        botao32();
         break;
     }
 
     case 33:{
+
+        botao33();
+        break;
+    }
+
+    case 34:{
+
+        botao34();
+        break;
+    }
+
+    case 35:{
+
+        botao35();
+        break;
+    }
+
+    case 36:{
 
         system("cls");
         printf("Programa Finalizado! ");
@@ -1519,6 +1791,7 @@ switch(opcao){
 
     default:{
 
+        system("cls");
         printf("\nOpcao Invalida! ");
         break;
     }
