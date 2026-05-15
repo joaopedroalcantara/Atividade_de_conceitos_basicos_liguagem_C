@@ -160,7 +160,7 @@ Uso de funções recursivas em exercícios específicos
 
 ## 📋 Menu de Opções
 O menu principal contém as seguintes opções:
-´´´
+---
 1) Média Fatec (If)
 2) Média Fatec (if/else/else if)
 3) Ajuste de Preço (if/else/else if)
@@ -197,7 +197,7 @@ O menu principal contém as seguintes opções:
 34) Fibonacci com recursividade
 35) P.A com recursividade
 36) Sair
-´´´´  
+---
 
 ## 🚀 Aprendizados Desenvolvidos
 Durante o desenvolvimento deste projeto, foram praticados conceitos importantes como:
@@ -212,7 +212,7 @@ Operações com matrizes
 Implementação de funções recursivas
 Simulação de eventos aleatórios com rand() e srand()
 
-##⚠️ Observações Técnicas
+## ⚠️ Observações Técnicas
 Alguns pontos importantes sobre o código:
 
 O comando system("cls") é específico para Windows.
@@ -222,7 +222,7 @@ O uso de fflush(stdin) não é recomendado pelo padrão da linguagem C, pois seu
 Algumas funções ainda podem ser melhoradas com validações adicionais de entrada.
 O projeto tem foco educacional e foi desenvolvido para prática dos conceitos básicos da linguagem.
 
-##🧩 Possíveis Melhorias
+## 🧩 Possíveis Melhorias
 Algumas melhorias futuras que podem ser aplicadas ao projeto:
 
 Corrigir incompatibilidades com compiladores diferentes
@@ -236,10 +236,10 @@ Melhorar a organização visual do menu
 Adicionar comentários explicativos em partes estratégicas do código
 Adaptar o projeto para funcionar melhor em Linux e macOS
 
-##📄 Licença
+## 📄 Licença
 Este projeto foi desenvolvido com fins educacionais para prática de conceitos básicos da linguagem C.
 
-##👨‍💻 Autor
+## 👨‍💻 Autor
 Desenvolvido por João Pedro Alcântara.
 
 LinkedIn: www.linkedin.com/in/joaopedroalcantara-dev
